@@ -1,10 +1,18 @@
 //configuracion de express
 import express from 'express';
+//conectarse con cors
+import cors from 'cors';
+import morgan from'morgan';
 import tasksRoutes from './routes/tasks';
 
 const app = express();
 
-//para poder usar o express.json()
+//conectarse con cors
+app.use(cors());
+//morgan necesita una propiedad dev
+app.use(morgan('dev'));
+
+//para poder usar express.json()
 app.use(express.json());
 
 app.use(tasksRoutes)
