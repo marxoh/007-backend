@@ -25,7 +25,7 @@ Content-Type: application/json
 DELETE {{api}}/6
 
 ###
-put {{api}}/6
+put {{api}}/21
 Content-Type: application/json
 
 {
